@@ -1,0 +1,78 @@
+<html>
+
+<head>
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		body {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			min-height: 100vh;
+		}
+
+		.container-img {
+			position: relative;
+			width: 300px;
+		}
+
+		.image {
+			display: block;
+			width: 300px;
+			transition: 1s;
+		}
+
+		.overlay {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			height: 100%;
+			opacity: 0;
+			transition: 1s;
+			background-color: rgba(13, 13, 13, 0.7);
+		}
+
+		.container-img:hover .overlay {
+			opacity: 1;
+		}
+
+		.container-img:hover .image {
+
+			transform: rotate(360deg);
+
+		}
+
+		.text {
+			color: rgb(231, 217, 217);
+			font-size: 20px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			text-align: center;
+
+		}
+	</style>
+</head>
+
+<body>
+	<center>
+		<h2>Image Overlay </h2>
+		<div class="container-img">
+			<img src="download.jpg"
+				 alt="Demo Image"
+				 class="image">
+
+			<div class="overlay">
+				<div class="text">Sparshiiii</div>
+			</div>
+		</div>
+	</center>
+</body>
+
+</html>
